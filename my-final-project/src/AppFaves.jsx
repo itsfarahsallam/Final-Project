@@ -2,7 +2,11 @@ import React, { useEffect, useState } from 'react';
 import './App.css';
 import Bird from '.components/BirdFaves';
 
+const AppFaves = () => {
+    return <h2>My Favorite Birds</h2>;
+  };
 
+// fix later
 function AppFaves() {
 
     const cedarWaxwing = {
@@ -40,10 +44,10 @@ function AppFaves() {
           <nav>
             <div class ="navbar">
               <ul>
-                <li><a href="App.jsx">Home</a></li>
+                <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">My Life List</a></li>
-                <li><a href="AppFaves.jsx">My Faves</a></li>
+                <li><a href="#">My Faves</a></li>
               </ul>
             </div>
           </nav>

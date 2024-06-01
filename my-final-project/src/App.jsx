@@ -36,7 +36,7 @@ function App() {
           <nav>
             <div class ="navbar">
               <ul>
-                <li><a href="my-final-project\src\App.jsx">Home</a></li>
+                <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">My Life List</a></li>
                 <li><a href="#">My Faves</a></li>
@@ -49,7 +49,19 @@ function App() {
                         <p>Hello! My name is Farah and this is my website.</p>
                     </div>
           </div>
-          <BirdList birds={birds} />
+          <div class="wrapper">
+            <div class="title">Search</div>
+              <div class="content">
+                <BirdList birds={birds} />
+              </div>
+          </div>
+          <div class="wrapper">
+            <div class="title">Till Next Year</div>
+            <div class="content">
+            
+            </div>
+
+          </div>
         </main>
       </div>
      
