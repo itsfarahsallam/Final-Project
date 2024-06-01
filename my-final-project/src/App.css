@@ -1,0 +1,98 @@
+@font-face {
+  font-family: 'Edu TAS Beginner';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/edutasbeginner/v3/ZXu9e04WubHfGVY-1TcNg7AFUmshqcTgoA.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+.App-header {
+  background-color: skyblue;
+  border: 1px solid steelblue;
+  border-radius: 2em;
+  padding: 20px;
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Edu TAS Beginner';
+  font-size: 120%; 
+  font-stretch: expanded; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+  background-image: linear-gradient(blue, white);
+}
+
+main {
+  width: 75%;
+  margin: 0 auto; /* Center align the main content */
+}
+
+.navbar {
+  margin: 22px auto;
+  padding: 10px;
+  overflow: hidden;
+  width: 164%; 
+  height: 60px;
+  background-color: skyblue;
+  border: 1px solid dodgerblue;
+  border-radius: 8px;
+  position: relative;
+}
+
+.navbar li {
+  list-style-type: none;
+  display: inline;
+  color: #00fcc1;
+  text-align: center;
+  margin: 22px auto;
+  padding-inline: 10px;
+  font-size: 100%;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  background-color: steelblue;
+  border-radius: 8px;
+  color: white;
+  padding: 5px;
+}
+
+.title {
+  background-color: skyblue;
+  width: 155%; 
+  padding: 20px;
+  font-weight: bold;
+  border: 1px solid dodgerblue;
+  font-size: 110%;
+}
+
+.content {
+  background-color: aliceblue;
+  width: 155%; 
+  padding: 20px;
+  font-weight: normal;
+  border: 1px solid dodgerblue;
+  font-size: 110%;
+  margin: 0 auto; 
+}
+
+h1 {
+  font-size: 2.5em;
+  color: #15429b;
+}
+
+h2 {
+  font-size: 1.5em;
+  color: #15429b;
+}
+
+p {
+  font-size: 1em;
+  color: #15429b;
+}
