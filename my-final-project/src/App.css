@@ -12,6 +12,8 @@
   border: 1px solid steelblue;
   border-radius: 2em;
   padding: 20px;
+  justify-content: center;
+  align-items: center;
 }
 
 body {
@@ -25,12 +27,12 @@ body {
   align-items: center;
   min-height: 100vh;
   text-align: center;
-  background-image: url(https://media0.giphy.com/media/242ByhXAbIptSMS9Ol/giphy.gif?cid=6c09b952qvy5wcw7jwbrwdbn1msp4bvywhf1i6v3eacat5rm&ep=v1_gifs_search&rid=giphy.gif&ct=g);
+  background-image: url(https://64.media.tumblr.com/14fc38f14316cc3789e27a81967da5ad/tumblr_p475p2b1461vbdodoo1_500.gif);
   background-repeat: repeat;
 }
 
 main {
-  width: 75%;
+  width: 100%;
   margin: 0 auto; /* Center align the main content */
 }
 
@@ -38,7 +40,7 @@ main {
   margin: 22px auto;
   padding: 10px;
   overflow: hidden;
-  width: 164%; 
+  width: 150%; 
   height: 60px;
   background-color: skyblue;
   border: 1px solid dodgerblue;
@@ -96,4 +98,10 @@ h2 {
 p {
   font-size: 1em;
   color: #15429b;
+}
+
+.bird {
+  background-color: coral;
+  border: 1px solid blue;
+  padding: 20px;
 }

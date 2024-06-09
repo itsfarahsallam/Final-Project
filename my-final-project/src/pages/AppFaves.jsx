@@ -1,6 +1,5 @@
 import React from 'react';
-import 'my-final-project\src\App.css';
-import Bird from 'my-final-project\src\components\BirdFaves.jsx';
+import Bird from '/src/components/BirdFaves';
 
 const AppFaves = () => {
   const cedarWaxwing = {
@@ -35,36 +34,27 @@ const AppFaves = () => {
 
   return (
     <>
-      <header className="App-header">
-        <h1>My Birding Website</h1>
-      </header>
       <div id="flex">
         <main>
-          <nav>
-            <div className="navbar">
-              <ul>
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/about">About</Link></li>
-              <li><Link to="/life-list">My Life List</Link></li>
-              <li><Link to="/faves">My Faves</Link></li>
-            </ul>
-            </div>
-          </nav>
           <div className="wrapper">
             <div className="title">My Favorite Birds</div>
             <div className="content">
               <div className='bird'>
                 <Bird bird={cedarWaxwing} />
               </div>
+              <br></br>
               <div className='bird'>
                 <Bird bird={greatBlueHeron} />
               </div>
+              <br></br>
               <div className='bird'>
                 <Bird bird={downyWoodpecker} />
               </div>
+              <br></br>
               <div className='bird'>
                 <Bird bird={barnOwl} />
               </div>
+              <br></br>
               <div className='bird'>
                 <Bird bird={treeSwallow} />
               </div>

@@ -1,15 +1,19 @@
+// BirdList.js
 import React from 'react';
-import Bird from './Bird';
 
 const BirdList = ({ birds }) => {
   return (
     <div>
-      {birds.length === 0 ? (
-        <p>No birds found.</p>
-      ) : (
+      {birds.length > 0 ? (
         birds.map((bird, index) => (
-          <Bird key={index} bird={bird} />
+          <div key={index} className="bird">
+            <h3>{bird.comName}</h3>
+            <p>Scientific Name: {bird.sciName}</p>
+            <p>Location: {bird.obsDt}</p> 
+          </div>
         ))
+      ) : (
+        <p>No birds found</p>
       )}
     </div>
   );
