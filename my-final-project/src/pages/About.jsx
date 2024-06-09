@@ -1,7 +1,20 @@
 import React from 'react';
 
 const About = () => {
-  return <h2>About Page</h2>;
-};
+  return (
+    <>
+      <div id="flex">
+        <main>
+          <div className="wrapper">
+            <div className="title">About Me</div>
+            <div className="content">
+              
+            </div>
+          </div>
+        </main>
+      </div>
+
+    </>
+  )};
 
 export default About;

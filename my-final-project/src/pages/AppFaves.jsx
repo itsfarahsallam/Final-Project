@@ -41,22 +41,27 @@ const AppFaves = () => {
             <div className="content">
               <div className='bird'>
                 <Bird bird={cedarWaxwing} />
+                <img src="https://www.allaboutbirds.org/guide/assets/photo/305837211-480px.jpg"/>
               </div>
               <br></br>
               <div className='bird'>
                 <Bird bird={greatBlueHeron} />
+                <img src="https://www.allaboutbirds.org/guide/assets/photo/60314281-480px.jpg"/>
               </div>
               <br></br>
               <div className='bird'>
                 <Bird bird={downyWoodpecker} />
+                <img src="https://www.allaboutbirds.org/guide/assets/photo/60397941-480px.jpg"/>
               </div>
               <br></br>
               <div className='bird'>
                 <Bird bird={barnOwl} />
+                <img src="https://www.allaboutbirds.org/guide/assets/photo/63738021-480px.jpg"/>
               </div>
               <br></br>
               <div className='bird'>
                 <Bird bird={treeSwallow} />
+                <img src="https://www.allaboutbirds.org/guide/assets/photo/305568421-480px.jpg"/>
               </div>
             </div>
           </div>
