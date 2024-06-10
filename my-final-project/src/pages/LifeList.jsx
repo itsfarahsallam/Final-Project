@@ -49,6 +49,45 @@ const LifeList = () => {
                     </div>
                   </div>
                 </div>
+                <div className="grid-item">
+                  <div className="flip-box">
+                    <div className="flip-box-inner">
+                      <div className="flip-box-front">
+                        <img src="https://media.audubon.org/nas_birdapi_hero/web_belted-kingfisher_02-20-2013-200-adult-female.jpg" alt="Belted Kingfisher" width="300px" height="200px" />
+                      </div>
+                      <div className="flip-box-back">
+                        <h3>Belted Kingfisher</h3>
+                        <p>June 8th, 2024</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="grid-item">
+                  <div className="flip-box">
+                    <div className="flip-box-inner">
+                      <div className="flip-box-front">
+                        <img src="https://www.allaboutbirds.org/guide/assets/photo/301825191-480px.jpg" alt="Willow Flycatcher" width="300px" height="200px" />
+                      </div>
+                      <div className="flip-box-back">
+                        <h3>Willow Flycatcher</h3>
+                        <p>June 8th, 2024</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="grid-item">
+                  <div className="flip-box">
+                    <div className="flip-box-inner">
+                      <div className="flip-box-front">
+                        <img src="https://www.hww.ca/kaboom/images/Birds/barn-swallow/barn-swallow-1.jpg" alt="Barn Swallow" width="300px" height="200px" />
+                      </div>
+                      <div className="flip-box-back">
+                        <h3>Barn Swallow</h3>
+                        <p>June 8th, 2024</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

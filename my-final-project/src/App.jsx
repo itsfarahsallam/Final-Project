@@ -62,7 +62,7 @@ function App() {
                 <div className="wrapper">
                   <div className="title">Welcome!</div>
                   <div className="content">
-                    <p>Hello! My name is Farah and this is my website.</p>
+                    <p>Hello! My name is Farah and this is my birding website.</p>
                   </div>
                 </div>
                 <div className="wrapper">
@@ -88,7 +88,6 @@ function App() {
                   <div className="title">Countdown Till Next Year</div>
                   <div className="content">
                     <DynamicScriptLoader src="my-final-project/src/components/timer.js" />
-                    {/* Timer HTML elements */}
                     <div id="days"></div>Days
                     <div id="hours"></div>Hours
                     <div id="minutes"></div>Minutes
@@ -97,12 +96,18 @@ function App() {
                 </div>
               </div>
             } />
+            
             <Route path="/about" element={<About />} />
             <Route path="/life-list" element={<LifeList />} />
             <Route path="/faves" element={<AppFaves />} />
           </Routes>
         </main>
       </div>
+      <footer className= "App-footer">
+        <p>Site Still Under Construction</p>
+        <p>&copy; Farah Sallam 2024</p>
+        <img src="https://i.gifer.com/embedded/download/4QYc.gif" alt="Cockatiel Somersault" width="300px" height="200px"/>
+      </footer>
     </Router>
   );
 }
