@@ -4,7 +4,7 @@ import About from "./pages/About";
 import AppFaves from "./pages/AppFaves"; 
 import LifeList from "./pages/LifeList";
 import BirdList from "./components/BirdList";
-import DynamicScriptLoader from "./components/DynamicScriptLoader";
+import CountdownTimer from './components/CountdownTimer';
 import "./App.css";
 import axios from 'axios';
 
@@ -12,6 +12,8 @@ function App() {
   const [birds, setBirds] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [error, setError] = useState(null);
+
+  const targetDate = new Date('2025-01-01T00:00:00');
 
   const fetchBirds = async () => {
     try {
@@ -87,11 +89,7 @@ function App() {
                 <div className="wrapper">
                   <div className="title">Countdown Till Next Year</div>
                   <div className="content">
-                    <DynamicScriptLoader src="my-final-project/src/components/timer.js" />
-                    <div id="days"></div>Days
-                    <div id="hours"></div>Hours
-                    <div id="minutes"></div>Minutes
-                    <div id="seconds"></div>Seconds
+                     <CountdownTimer targetDate={targetDate} />
                   </div>
                 </div>
               </div>
