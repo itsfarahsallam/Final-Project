@@ -4,6 +4,7 @@ import About from "./pages/About";
 import AppFaves from "./pages/AppFaves"; 
 import LifeList from "./pages/LifeList";
 import BirdList from "./components/BirdList";
+import Quiz from "./pages/Quiz";
 import CountdownTimer from './components/CountdownTimer';
 import "./App.css";
 import axios from 'axios';
@@ -54,6 +55,7 @@ function App() {
               <li><Link to="/about">About</Link></li>
               <li><Link to="/life-list">My Life List</Link></li>
               <li><Link to="/faves">My Faves</Link></li>
+              <li><Link to="/quiz">Quiz</Link></li>
             </ul>
           </div>
         </nav>
@@ -98,6 +100,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/life-list" element={<LifeList />} />
             <Route path="/faves" element={<AppFaves />} />
+            <Route path="/quiz" element={<Quiz />} />
           </Routes>
         </main>
       </div>

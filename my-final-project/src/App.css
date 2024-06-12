@@ -100,6 +100,24 @@ p {
   color: #15429b;
 }
 
+.quiz-button {
+  display: block;
+  margin: 10px 0;
+  padding: 10px;
+  width: 100%;
+  font-size: 1em;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.quiz-button:hover {
+  background-color: #0056b3;
+}
+
 .bird {
   background-color: peachpuff;
   padding: 20px;
