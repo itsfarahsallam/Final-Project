@@ -1,24 +1,27 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom"; 
 import About from "./pages/About"; 
 import AppFaves from "./pages/AppFaves"; 
 import LifeList from "./pages/LifeList";
-import BirdList from "./components/BirdList";
 import Quiz from "./pages/Quiz";
 import CountdownTimer from './components/CountdownTimer';
+import FetchData from './components/FetchData';
 import "./App.css";
 import axios from 'axios';
 
 function App() {
-  const [birds, setBirds] = useState([]);
-  const [searchTerm, setSearchTerm] = useState('');
-  const [error, setError] = useState(null);
+  const targetDate = new Date('2025-01-01T00:00:00'); // target date
+  const [searchTerm, setSearchTerm] = useState("");
+  const [bird, setBird] = useState(null);
 
-  const targetDate = new Date('2025-01-01T00:00:00');
+  const handleSearchChange = (event) => {
+    setSearchTerm(event.target.value);
+  };
 
-  const fetchBirds = async () => {
+  const handleSearchSubmit = async (event) => {
+    event.preventDefault();
     try {
-      const response = await axios.get('https://api.ebird.org/v2/data/obs/geo/recent', {
+      const response = await axios.get(`https://api.ebird.org/v2/ref/taxonomy/ebird`, {
         headers: {
           'X-eBirdApiToken': 'ni9u96j4iq8f'
         },
@@ -26,19 +29,10 @@ function App() {
           q: searchTerm
         }
       });
-      setBirds(response.data);
+      setBird(response.data[0]); // Assuming the first match is the desired bird
     } catch (error) {
-      setError(error.message);
+      console.error('Error fetching data from eBird API:', error);
     }
-  };
-
-  useEffect(() => {
-    fetchBirds();
-  }, [searchTerm]);
-
-  const handleSearch = (event) => {
-    event.preventDefault();
-    fetchBirds();
   };
 
   return (
@@ -70,22 +64,9 @@ function App() {
                   </div>
                 </div>
                 <div className="wrapper">
-                  <div className="title">Search</div>
+                  <div className="title">Search a Bird</div>
                   <div className="content">
-                    <form onSubmit={handleSearch}>
-                      <label>
-                        Search For a Bird by Common Name:
-                        <input 
-                          type="text" 
-                          value={searchTerm} 
-                          onChange={(e) => setSearchTerm(e.target.value)}
-                        />
-                      </label>
-                      <br></br><br></br>
-                      <button type="submit">Search</button>
-                    </form>
-                    <BirdList birds={birds} />
-                    {error && <p>Error: {error}</p>}
+                   <FetchData></FetchData>
                   </div>
                 </div>
                 <div className="wrapper">
@@ -104,7 +85,7 @@ function App() {
           </Routes>
         </main>
       </div>
-      <footer className= "App-footer">
+      <footer className="App-footer">
         <p>Site Still Under Construction</p>
         <p>&copy; Farah Sallam 2024</p>
         <img src="https://i.gifer.com/embedded/download/4QYc.gif" alt="Cockatiel Somersault" width="300px" height="200px"/>
