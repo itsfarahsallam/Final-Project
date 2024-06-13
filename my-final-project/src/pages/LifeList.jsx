@@ -349,6 +349,45 @@ const LifeList = () => {
                     </div>
                   </div>
                 </div>
+                <div className="grid-item">
+                  <div className="flip-box">
+                    <div className="flip-box-inner">
+                      <div className="flip-box-front">
+                        <img src="https://www.allaboutbirds.org/guide/assets/photo/308597451-480px.jpg" alt="Brown Creeper" width="300px" height="200px" />
+                      </div>
+                      <div className="flip-box-back">
+                        <h3>Brown Creeper</h3>
+                        <p>April 17th, 2024</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="grid-item">
+                  <div className="flip-box">
+                    <div className="flip-box-inner">
+                      <div className="flip-box-front">
+                        <img src="https://www.allaboutbirds.org/guide/assets/photo/305585021-480px.jpg" alt="Violet-green Swallow" width="300px" height="200px" />
+                      </div>
+                      <div className="flip-box-back">
+                        <h3>Violet-green Swallow</h3>
+                        <p>April 17th, 2024</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="grid-item">
+                  <div className="flip-box">
+                    <div className="flip-box-inner">
+                      <div className="flip-box-front">
+                        <img src="https://media.audubon.org/nas_birdapi_hero/h_ring-necked-duck_004_spring_california_beckymatsubara_flickrcc-by-2.0_breeding-adult-male.jpg" alt="Ring-necked Duck" width="300px" height="200px" />
+                      </div>
+                      <div className="flip-box-back">
+                        <h3>Ring-necked Duck</h3>
+                        <p>April 17th, 2024</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

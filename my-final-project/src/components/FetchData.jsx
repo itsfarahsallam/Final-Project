@@ -71,7 +71,7 @@ function FetchData() {
         )}
       </div>
       <div className="records-section">
-        <h2>Recent Bird Observations</h2>
+        <h2>Bird Observations</h2>
         <ul>
           {records.map((record, index) => (
             <li key={index}>
