@@ -311,6 +311,7 @@ const Birds = () => (
 <div className="wrapper">
   <div className="title">Birds I've Seen!</div>
   <div className="content">
+    <h4>Species to Date: {birds.length}</h4>
     <p>Disclaimer: These Photos are NOT my own. All photography belongs to their respective owners.</p>
   <div className="container">
     <div className="grid-container">

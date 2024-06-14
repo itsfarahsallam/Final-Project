@@ -5,35 +5,10 @@ import AppFaves from "./pages/AppFaves";
 import LifeList from "./pages/LifeList";
 import Quiz from "./pages/Quiz";
 import CountdownTimer from './components/CountdownTimer';
-import FetchData from './components/FetchData';
 import "./App.css";
-import axios from 'axios';
 
 function App() {
   const targetDate = new Date('2025-01-01T00:00:00'); // target date
-  const [searchTerm, setSearchTerm] = useState("");
-  const [bird, setBird] = useState(null);
-
-  const handleSearchChange = (event) => {
-    setSearchTerm(event.target.value);
-  };
-
-  const handleSearchSubmit = async (event) => {
-    event.preventDefault();
-    try {
-      const response = await axios.get(`https://api.ebird.org/v2/ref/taxonomy/ebird`, {
-        headers: {
-          'X-eBirdApiToken': 'ni9u96j4iq8f'
-        },
-        params: {
-          q: searchTerm
-        }
-      });
-      setBird(response.data[0]); // Assuming the first match is the desired bird
-    } catch (error) {
-      console.error('Error fetching data from eBird API:', error);
-    }
-  };
 
   return (
     <Router>
@@ -64,20 +39,13 @@ function App() {
                   </div>
                 </div>
                 <div className="wrapper">
-                  <div className="title">Search a Bird</div>
-                  <div className="content">
-                   <FetchData></FetchData>
-                  </div>
-                </div>
-                <div className="wrapper">
                   <div className="title">Countdown Till Next Year</div>
                   <div className="content">
-                     <CountdownTimer targetDate={targetDate} />
+                    <CountdownTimer targetDate={targetDate} />
                   </div>
                 </div>
               </div>
             } />
-            
             <Route path="/about" element={<About />} />
             <Route path="/life-list" element={<LifeList />} />
             <Route path="/faves" element={<AppFaves />} />
