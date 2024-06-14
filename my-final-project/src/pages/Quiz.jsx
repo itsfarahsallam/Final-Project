@@ -1,4 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
+import LinearProgress from '@mui/material/LinearProgress';
+import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
 
 const quizQuestions = [
   {
@@ -78,10 +82,34 @@ const quizQuestions = [
   }
 ];
 
+function LinearProgressWithLabel(props) {
+  return (
+    <Box sx={{ display: 'flex', alignItems: 'center' }}>
+      <Box sx={{ width: '100%', mr: 1 }}>
+        <LinearProgress variant="determinate" {...props} />
+      </Box>
+      <Box sx={{ minWidth: 35 }}>
+        <Typography variant="body2" color="text.secondary">{`${Math.round(
+          props.value,
+        )}%`}</Typography>
+      </Box>
+    </Box>
+  );
+}
+
+LinearProgressWithLabel.propTypes = {
+  value: PropTypes.number.isRequired,
+};
+
 const Quiz = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [userAnswers, setUserAnswers] = useState([]);
   const [showScore, setShowScore] = useState(false);
+  const [progress, setProgress] = useState(0);
+
+  useEffect(() => {
+    setProgress(((currentQuestion) / quizQuestions.length) * 100);
+  }, [currentQuestion]);
 
   const handleAnswerOptionClick = (option) => {
     setUserAnswers([...userAnswers, option]);
@@ -120,6 +148,7 @@ const Quiz = () => {
     setCurrentQuestion(0);
     setUserAnswers([]);
     setShowScore(false);
+    setProgress(0);
   };
 
   return (
@@ -135,6 +164,7 @@ const Quiz = () => {
             </div>
           ) : (
             <div>
+              <LinearProgressWithLabel value={progress} />
               <h2>{quizQuestions[currentQuestion].question}</h2>
               <div>
                 {quizQuestions[currentQuestion].options.map((option) => (
