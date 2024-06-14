@@ -69,6 +69,12 @@ main {
   padding: 5px;
 }
 
+ul, ol {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
 .title {
   background-color: skyblue;
   padding: 10px;
@@ -83,6 +89,7 @@ main {
   font-weight: normal;
   border: 1px solid dodgerblue;
   font-size: 110%;
+  width: 935px;
 }
 
 h1 {
@@ -99,7 +106,7 @@ p {
   font-size: 1em;
   color: #15429b;
 }
-
+/* Quiz Buttons */
 .quiz-button {
   display: block;
   margin: 10px 0;
@@ -118,6 +125,25 @@ p {
   background-color: #0056b3;
 }
 
+.quiz-restart-button {
+  display: block;
+  margin: 0 auto;
+  padding: 10px;
+  width: 25%;
+  font-size: 1em;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.quiz-restart-button:hover {
+  background-color: #0056b3;
+}
+
+/* LifeList and Faves */
 .bird {
   background-color: peachpuff;
   padding: 20px;

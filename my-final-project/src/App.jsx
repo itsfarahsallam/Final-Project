@@ -39,6 +39,20 @@ function App() {
                   </div>
                 </div>
                 <div className="wrapper">
+                  <div className="title">Birding Resources</div>
+                  <div className="content">
+                    <p>I'm merely a novice birder. So if you want to learn more about birding, I recommend these websites!</p>
+                    <ul>
+                      <li><a href='https://www.sibleyguides.com/'>Sibley Guides</a></li>
+                      <li><a href='https://ebird.org/home/'>eBird</a></li>
+                      <li><a href='https://www.aba.org/birding-news/'>ABA Birding News</a></li>
+                      <li><a href='https://www.allaboutbirds.org/news/'>All About Birds</a></li>
+                      <li><a href='https://www.inaturalist.org/'>iNaturalist</a></li>
+                    </ul>
+                    <br></br>
+                  </div>
+                </div>
+                <div className="wrapper">
                   <div className="title">Countdown Till Next Year</div>
                   <div className="content">
                     <CountdownTimer targetDate={targetDate} />

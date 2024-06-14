@@ -104,6 +104,24 @@ const Quiz = () => {
     return score;
   };
 
+  const getScoreMessage = (score) => {
+    if (score === quizQuestions.length) {
+      return "Congratulations! You got a perfect score!";
+    } else if (score >= quizQuestions.length * 0.8) {
+      return "Well done! Great score!";
+    } else if (score >= quizQuestions.length * 0.5) {
+      return "Not bad! You can try again!";
+    } else {
+      return "Keep practicing! You can do better!";
+    }
+  };
+
+  const restartQuiz = () => {
+    setCurrentQuestion(0);
+    setUserAnswers([]);
+    setShowScore(false);
+  };
+
   return (
     <div>
       <div className="wrapper">
@@ -112,7 +130,8 @@ const Quiz = () => {
           {showScore ? (
             <div>
               <h2>Your Score: {calculateScore()} / {quizQuestions.length}</h2>
-              <h4>Thanks for playing! Refresh to try again.</h4>
+              <p>{getScoreMessage(calculateScore())}</p>
+              <button className="quiz-restart-button" onClick={restartQuiz}>Restart Quiz</button>
             </div>
           ) : (
             <div>
